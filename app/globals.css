@@ -1,21 +1,84 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
+
+
+/*=============== VARIABLES CSS ===============*/
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --body-color: hsl(0, 0%, 95%);
+
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --small-font-size: .813rem;
 }
 
-@media (prefers-color-scheme: dark) {
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1120px) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --h2-font-size: 1.5rem;
+    --small-font-size: .875rem;
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+}
+
+
+
+@font-face {
+    font-family: 'Grifter';
+    src: url('./fonts/grifterbold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer components {
+    .bttn {
+        @apply px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center tracking-tight
+    }
+
+    .bttn-primary {
+        @apply bg-black text-white
+    }
+
+    .bttn-text {
+        @apply bg-transparent text-black
+    }
+
+    .a-nav{
+      @apply transition-all duration-300 ease-in-out
+    }
+
+    .a-nav:hover{
+      @apply text-[#9b0935] scale-x-110
+    }
+
+    .a-foot{
+      @apply transition-all duration-300 ease-in-out 
+    }
+
+    .a-foot:hover{
+      @apply scale-x-105
+    }
+
+    .a-social{
+      @apply transition-all duration-300 ease-in-out opacity-100
+    }
+
+    .a-social:hover{
+      @apply opacity-60
+    }
 }
