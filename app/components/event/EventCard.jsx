@@ -2,14 +2,14 @@ import './styles.css'
 import Image from "next/image"
 import devv from '@/app/assets/devv.jpg'
 
-const EventCard = () => {
+const EventCard = ({title,date}) => {
   return (
     <article className="cardArticle relative rounded-3xl overflow-hidden group">
         <Image src={devv}  alt='image' className="cardImage"/>
 
         <div className="rounded-3xl absolute flex flex-col gap-5 justify-center items-center bg-[#1f1f1f] text-white p-2 top-[-10rem] right-[-10rem] group-hover:top-0 group-hover:right-0 w-full h-full  transform group-hover:scale-100 scale-0  trans">
-            <span className="cardDesc">31-August-2024</span>
-            <h2 className="font-semibold text-2xl md:text-3xl">Dev Summit '24</h2>
+            <span className="cardDesc">{date}</span>
+            <h2 className="font-semibold text-2xl md:text-3xl">{title}</h2>
             <a href='#' className="text-[#9b0935] font-medium hover:underline hover:underline-offset-4">Read More</a>
 
             <div className='bg-white absolute top-0 right-0 w-14 h-14 md:w-16 md:h-16 rounded-bl-2xl'>

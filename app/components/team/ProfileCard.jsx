@@ -2,7 +2,7 @@ import Image from "next/image"
 import avatar from '@/app/assets/bat.jpg'
 import mail from '@/app/assets/mail.svg'
 
-const ProfileCard = () => {
+const ProfileCard = ({name, title}) => {
   return (
     <div className="flex flex-col justify-center items-center  hover:scale-105 trans5 group">
         <div className="h-[210px] w-[210px] md:h-52 md:w-52 rounded-full overflow-hidden relative ">
@@ -11,8 +11,8 @@ const ProfileCard = () => {
             <a href='mailto:karthiku@ieee.org'><Image src={mail} alt="social" width={30} className="filter invert transform active:scale-75 trans"/></a>
           </div>
         </div>
-        <h1 className="text-lg md:text-xl font-semibold text-gray-800">KARTHIK U</h1>
-        <h2 className="text-sm md:text-md font-medium text-gray-600">Chairman</h2>
+        <h1 className="text-lg md:text-xl font-semibold text-gray-800">{name}</h1>
+        <h2 className="text-sm md:text-md font-medium text-gray-600">{title}</h2>
     </div>
   )
 }
