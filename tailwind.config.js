@@ -15,6 +15,9 @@ module.exports = {
         custom: ['Grifter', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
       },
+      spacing: {
+        'screen-minus-80': 'calc(100vh - 80px)', // Custom spacing value
+      },
     },
   },
   plugins: [require('@tailwindcss/typography'), require('daisyui')],

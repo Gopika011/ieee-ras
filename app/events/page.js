@@ -1,4 +1,4 @@
-import EventCard from "./EventCard"
+import EventCard from "../components/event/EventCard"
  
 const Events = () => {
   return (
