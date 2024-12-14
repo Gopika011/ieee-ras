@@ -1,0 +1,61 @@
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.ccontainer {
+  display: grid;
+  place-items: center;
+}
+
+.cardContainer {
+  display: grid;
+  row-gap: 3.5rem;
+}
+
+
+.cardArticle {
+  position: relative;
+  overflow: hidden;
+
+}
+
+.cardImage {
+  width: 328px;
+  border-radius: 1rem;
+}
+
+
+
+
+/* For smaller devices */
+@media screen and (max-width: 340px) {
+  .ccontainer {
+    margin-inline: 1rem;
+  }
+
+  .cardData {
+    width: 220px;
+    padding: 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+  .cardContainer {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+  .cardContainer {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.5rem;
+  }
+  .cardImage {
+    width: 308px;
+  }
+}
